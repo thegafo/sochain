@@ -9,6 +9,8 @@ Excerpt from [SoChain website](https://chain.so/api#introduction):
 
 ## Usage
 
+### Node JS
+
 ```javascript
 
 var SoChain = require('sochain');
@@ -33,6 +35,18 @@ chain.address('1Jf2gLDsr4U6JhivD2Lu9eiH9rNJu6Hyxg').then(console.log);
 // Broadcast signed transaction hex
 chain.broadcast(hex).then(console.log);
 
+```
+
+### Browser
+
+*CDN hosting coming soon...*
+
+```html
+<script src="dist/sochain.js"></script>
+<script>
+  var chain = new SoChain('LTCTEST');
+  chain.info().then(console.log).catch(console.error)
+</script>
 ```
 
 ## Networks
