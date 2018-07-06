@@ -2,6 +2,7 @@
 const request = require('request');
 
 class SoChain {
+
   constructor (network) {
     this.network = network;
   }
@@ -55,7 +56,6 @@ class SoChain {
      });
    }
 
-
   /**
    * async info - get network info
    *
@@ -106,6 +106,12 @@ class SoChain {
     return await this.get(`https://chain.so/api/v2/address/${this.network}/${id}`);
   }
 
+  /**
+   * async utxos - get UTXOs for address
+   *
+   * @param  {String} address the address to lookup
+   * @return {Promise}        resolves with utxo data
+   */
   async utxos(address) {
     return await this.get(`https://chain.so/api/v2/get_tx_unspent/${this.network}/${address}`);
   }
