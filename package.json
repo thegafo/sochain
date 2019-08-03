@@ -1,6 +1,6 @@
 {
   "name": "sochain",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node JS helper library for Chain.so API",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,9 @@
   },
   "homepage": "https://github.com/gafopi/sochain#readme",
   "dependencies": {
-    "request": "^2.87.0"
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.3.0"
   }
 }
